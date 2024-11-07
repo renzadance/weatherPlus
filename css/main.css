@@ -1,0 +1,554 @@
+@import './rest.css';
+
+.wrapper{
+    height: 100%;
+    min-height: 100%;
+}
+
+body{
+    background-color: #131215;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+.wrapper{
+    padding: 25px 25px;
+    
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 40px 0;
+}
+/* header */
+.header_title{
+    display: flex;
+    align-items: center;
+}
+.header_h1{
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0 0 0 5px;
+}
+.header_h1 span{
+    font-weight: 400;
+}
+.form_search{
+    font-size: 15px;
+    min-width: 500px;
+    border-radius: 60px;
+    background: #1C1C1E;
+    display: flex;
+    align-items: stretch;
+    padding: 15px 15px 15px 20px;
+    margin: 0 10px;
+}
+.form_search input{
+    flex-grow: 1;
+}
+.form_search button {
+    width: 25px;
+    height: 25px;
+    margin: 0 10px 0 0;
+}
+.section_time{
+    font-size: 40px;
+    font-weight: 100;
+    width: 230px;
+    margin-right: 10px;
+}
+
+/* main */
+main{
+    display: flex;
+    width: 100%;
+}
+aside{
+    margin-right: 40px;
+}
+/* weather info now */
+.weather_info-now{
+    padding: 25px 25px;
+    background: #1C1C1E;
+    border-radius: 20px;
+
+}
+.day_or_hight{
+    font-size: 12px;
+    font-weight: 300;
+    color: gray;
+}
+.hr{
+    width: auto;
+    margin: 15px 0;
+    border-bottom: 0.1px solid rgba(95, 95, 95, 0.413);
+}
+.weather_info-now p{
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 0 5px 0;
+}
+.weather_now_temp{
+    font-size: 55px;
+    font-weight: 500;
+}
+.weather_now_temp small {
+    font-size: 60px;
+}
+.weather_info-now_temp{
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px 5px;
+}
+.weather_info-now_temp img{
+    margin: 0 20px;
+}
+.weather_now{
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    color: gray;
+}
+.weather_now_date{
+    margin: 0 0 10px 0;
+}
+
+/* weather history 5 days */
+.weather_history_title{
+    margin: 20px 0 15px 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.weather_history{
+    padding: 25px;
+    width: 260.19px;
+    background: #1c1c1e;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.weather_history_item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.weather_history_item_temp{
+    display: flex;
+    align-items: center;
+    width: 70px;
+}
+.weather_history_item_temp img{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+.weather_history_item-style{
+    font-size: 10px;
+    color: gray;
+}
+.weather_history_item-date-style{
+    width: 35px;
+    text-align: center;
+}
+.weather_history_item-day-style{
+    width: 60px;
+    text-align: center;
+}
+/* #1A191C */
+/* today highlights */
+section{
+    width: 100%;
+}
+.today_highlights{
+    background: #1c1c1e;
+    border-radius: 20px;
+    padding: 25px;
+}
+.today_highlights_title{
+    margin-bottom: 10px;
+}
+.today_highlights_elements {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* wind_speed */
+.wind_speed_info{
+    background-color: #1A191C;
+    border-radius: 20px;
+    padding: 15px 25px;
+
+    grid-column: 1 / 3;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.wind_speed_air_quality{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.today_highlights_element_title{
+    font-size: 13px;
+    color: gray;
+    font-weight: 500;
+}
+.wind_speed{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0 20px 0;
+}
+.wind_speed_item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.wind_speed small{
+    font-size: 10px;
+    color: gray;
+    text-align: center;
+}
+.wind_speed p{
+    font-size: 30px;
+}
+
+/* sunrise_sunset */
+.sunrise_sunset{
+    background-color: #1a191c;
+    border-radius: 20px;
+    padding: 15px 25px;
+
+    border-radius: 20px;
+    grid-column: 3 / 5;
+    grid-row: 1;
+}
+.sunrise_sunset_elements{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+.sunrise_sunset_element{
+    display: flex;
+    align-items: end;
+    gap: 20px;
+    font-size: 30px;
+}
+.sunrise_sunset_element small{
+    font-size: 12px;
+    color: gray;
+}
+
+
+/* humidity_info & pressure_info & visibility_info & feels-like_info*/
+.today_highlights-item{
+    padding: 15px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.today_highlights_element_title{
+
+}
+.today_highlights-item_state{
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    align-items: center;
+}
+.today_highlights-item_state img{
+    margin-right: 10px;
+}
+
+/* humidity_info */
+.humidity_info{
+    background-color: #1A191C;
+    border-radius: 20px;
+    grid-row: 2;
+}
+
+/* pressure_info */
+.pressure_info{
+    background-color: #1A191C;
+    border-radius: 20px;
+    grid-row: 2;
+}
+
+/* visibility_info */
+.visibility_info{
+    background-color: #1A191C;
+    border-radius: 20px;
+    grid-row: 2;
+}
+
+/* feels-like_info */
+.feels-like_info{
+    background-color: #1A191C;
+    border-radius: 20px;
+    grid-row: 2;
+}
+.feels-like_value small{
+    font-size: 20px;
+}
+
+/* today_temp_time */
+.time_title{
+    margin: 20px 0;
+    font-weight: 500;
+}
+.today_temp_time{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 15px;
+}
+.today_temp_time_item{
+    background: #1C1C1E;
+    border-radius: 20px;
+    padding: 15px 0;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+.today_temp_time_item-img img{
+    width: 40px;
+}
+.today_temp_time_item-time{
+    font-size: 14px;
+    color: rgb(199, 199, 199);
+}
+.today_temp_time_item-temp{
+    font-size: 13px;
+    color: rgb(199, 199, 199);
+}
+
+#loader-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.751); 
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+}
+
+  /* Стиль для спиннера */
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.487);
+    border-top: 5px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Анимация вращения спиннера */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media(max-width: 1415px){
+    .today_highlights_elements{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .humidity_info{
+        grid-row: 3;
+    }
+    .pressure_info{
+        grid-row: 3;
+    }
+    .visibility_info{
+        grid-row: 4;
+    }
+    .feels-like_info{
+        grid-row: 4;
+    }
+    .sunrise_sunset{
+        grid-column: 1 / 3;
+        grid-row: 2;
+    }
+}
+
+@media(max-width: 970px){
+    .section_time{
+        display: none;
+    }
+
+    .wind_speed p{
+        font-size: 20px;
+    }
+    .wind_speed img{
+        width: 40px;
+    }
+
+    .sunrise_sunset_element{
+        font-size: 20px;
+    }
+    .sunrise_sunset_element img{
+        width: 35px;
+    }
+
+    .today_highlights-item_state{
+        font-size: 20px;
+    }
+    .today_highlights-item_state img{
+        width: 35px;
+    }
+    
+}
+
+
+@media(max-width: 780px){
+
+    .wrapper{
+        padding: 10px 25px;
+    }
+
+    header{
+        margin: 0 0 10px 0;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* search */
+    .form_search{
+        min-width: auto;
+    }
+
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.751); 
+        backdrop-filter: blur(0); 
+        opacity: 0; 
+        transition: backdrop-filter 0.3s ease, opacity 0.3s ease; 
+        z-index: 10;
+        pointer-events: none;
+    }
+    
+    body.blurred::before {
+        backdrop-filter: blur(8px);
+        opacity: 1; 
+    }
+
+    .form_search {
+        position: relative;
+        z-index: 11; 
+        transition: transform 0.3s ease;
+    }
+
+    .form_search_focus{
+        transform: translateY(-60px);
+    }
+
+    main{
+        flex-direction: column;
+        margin: auto;
+    }
+    .weather_info-now_temp{
+        justify-content: space-between;
+    }
+    .weather_history{
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+    .today_temp_time{
+        overflow: scroll;
+        order: 1;
+    }
+    .today_temp_time::-webkit-scrollbar{
+        width: 0;
+    }
+    .today_temp_time_item{
+        width: 100px;
+    }
+    aside{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    section{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+    .today_temp_time{
+        order: 1;
+    }
+    .time_title{
+        display: none;
+    }
+    .today_highlights{
+        order: 2;
+    }
+}
+
+@media(max-width:475px){
+    .wind_speed{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .wind_speed_km{
+        grid-column: 2 / 4;
+        grid-row: 1;
+    }
+    .wind_speed_item{
+        align-items: center;
+    }
+    .wind_speed_img{
+        display: flex;
+        justify-content: center;
+    }
+
+    .today_highlights_elements{
+        display: flex;
+        flex-direction: column;
+    }
+    .sunrise_sunset_elements{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sunrise_sunset_element{
+        display: flex;
+        justify-content: space-between;
+    }
+    .today_highlights-item_state{
+        justify-content: space-between;
+    }
+
+    .sunrise_sunset_img{
+        justify-self: flex-start;
+    }
+
+    .today_highlights-item_state{
+        font-size: 30px;
+    }
+    .sunrise_sunset_element{
+        font-size: 30px;
+    }
+    .wind_speed p{
+        font-size: 30px;
+    }
+    
+}

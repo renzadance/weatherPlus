@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>weather</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header>
+            <div id="loader-overlay">
+                <div class="spinner"></div>
+            </div>
+        
+            <!-- титульник сайта -->
+            <div class="header_title">
+                <img src="/img/ui/header-icon.svg" alt="header_icon" width="50px">
+                <div class="header_h1">
+                    <h1>weather<span>io</span></h1>
+                </div>
+            </div>
+            <!-- поиск города -->
+            <div class="search">
+                
+                <form action="" class="form_search">
+                    <button type="submit"><img src="/img/ui/search.svg" alt=""></button>
+                    <input id="search" type="text" placeholder="Search city...">
+                </form>
+
+            </div>
+            <!-- время -->
+            <div class="section_time">
+                <span class="time" id="hours">00</span>
+                <span> : </span>
+                <span class="time" id="minutes">00</span>
+                <span> : </span>
+                <span class="time" id="seconds">00</span>
+            </div>
+
+        </header>
+
+        <main>
+
+            <aside>
+                <!-- погода сейчас -->
+                <div class="weather_info-now">
+                    <p>Now</p>
+
+                    <div class="weather_info-now_temp">
+                        <div class="weather_now_temp">-°<small>ᶜ</small></div>
+                        <img class="weather_now_img" src="/img/ui/loading_weather.svg" alt="" width="90px">
+                    </div>
+                    <div class="day_or_hight">day or night</div>
+                    <div class="hr"></div>
+                    <div class="weather_now_date weather_now">
+                        <img src="/img/ui/calendar.svg" alt="calendar" width="18px">
+                        <div class="weather_now_date_info">Weekday --, Month</div>
+                    </div>
+                    <div class="weather_now_geo weather_now">
+                        <img src="/img/ui/gps.svg" alt="geo_icon" width="18px">
+                        <div class="weather_now_geo_info">City</div>
+                    </div>
+                </div>
+                <!-- погода на 5 дней -->
+                <div class="weather_history_title">5 Days Forecast</div>
+
+                <div class="weather_history">
+
+                    <div class="weather_history_item-1 weather_history_item">
+                        <div class="weather_history_item-1_temp weather_history_item_temp">
+                            <img id="weather_history_img-1" src="/img/ui/loading_weather.svg" alt="">
+                            <div class="history_item-1_temp">--°</div>
+                        </div>
+                        <div class="weather_history_item-1_date weather_history_item-style weather_history_item-date-style">- -</div>
+                        <div class="weather_history_item-1_day weather_history_item-style weather_history_item-day-style">-</div>
+                    </div>
+
+                    <div class="weather_history_item-2 weather_history_item">
+                        <div class="weather_history_item-2_temp weather_history_item_temp">
+                            <img id="weather_history_img-2" src="/img/ui/loading_weather.svg" alt="">
+                            <div class="history_item-2_temp">--°</div>
+                        </div>
+                        <div class="weather_history_item-2_date weather_history_item-style weather_history_item-date-style">- -</div>
+                        <div class="weather_history_item-2_day weather_history_item-style weather_history_item-day-style">-</div>
+                    </div>
+
+                    <div class="weather_history_item-3 weather_history_item">
+                        <div class="weather_history_item-3_temp weather_history_item_temp">
+                            <img id="weather_history_img-3" src="/img/ui/loading_weather.svg" alt="">
+                            <div class="history_item-3_temp">--°</div>
+                        </div>
+                        <div class="weather_history_item-3_date weather_history_item-style weather_history_item-date-style">- -</div>
+                        <div class="weather_history_item-3_day weather_history_item-style weather_history_item-day-style">-</div>
+                    </div>
+
+                    <div class="weather_history_item-4 weather_history_item">
+                        <div class="weather_history_item-4_temp weather_history_item_temp">
+                            <img id="weather_history_img-4" src="/img/ui/loading_weather.svg" alt="">
+                            <div class="history_item-4_temp">--°</div>
+                        </div>
+                        <div class="weather_history_item-4_date weather_history_item-style weather_history_item-date-style">- -</div>
+                        <div class="weather_history_item-4_day weather_history_item-style weather_history_item-day-style">-</div>
+                    </div>
+
+                    <div class="weather_history_item-5 weather_history_item">
+                        <div class="weather_history_item-5_temp weather_history_item_temp">
+                            <img id="weather_history_img-5" src="/img/ui/loading_weather.svg" alt="">
+                            <div class="history_item-5_temp">--°</div>
+                        </div>
+                        <div class="weather_history_item-5_date weather_history_item-style weather_history_item-date-style">- -</div>
+                        <div class="weather_history_item-5_day weather_history_item-style weather_history_item-day-style">-</div>
+                    </div>
+                </div>
+
+            </aside>
+
+            <section>
+                <!-- основные моменты сегодня -->
+                <div class="today_highlights">
+
+                    <div class="today_highlights_title">Todays Highlights</div>
+
+                    <div class="today_highlights_elements">
+
+                        <div class="wind_speed_info">
+                            <!-- качество воздуха -->
+                            <div class="wind_speed_air_quality">
+                                <div class="air_quality_title today_highlights_element_title">Air Quality Index</div>
+                            </div>
+                            <!-- ветер -->
+                            <div class="wind_speed">
+                                <div class="wind_speed_img"><img src="/img/ui/wind.svg" alt="wind_speed" width="50px"></div>
+                                <div class="wind_speed_km wind_speed_item">
+                                    <small>SPEED</small>
+                                    <p id="wind_speed_km">-- km/h</p>
+                                </div>
+                                <div class="wind_speed_so2 wind_speed_item">
+                                    <small>SO2</small>
+                                    <p id="wind_speed_so2">--</p>
+                                </div>
+                                <div class="wind_speed_no2 wind_speed_item">
+                                    <small>NO2</small>
+                                    <p id="wind_speed_no2">--</p>
+                                </div>
+                                <div class="wind_speed_o3 wind_speed_item">
+                                    <small>O3</small>
+                                    <p id="wind_speed_o3">--</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- рассвет и закат -->
+                        <div class="sunrise_sunset">
+
+                            <div class="today_highlights_title today_highlights_element_title">Sunrise & Sunset</div>
+
+                            <div class="sunrise_sunset_elements">
+
+                                <div class="sunrise sunrise_sunset_element">
+                                    <div class="sunrise_sunset_img">
+                                        <img src="/img/ui/sunrise.svg" alt="sunrise" width="45px">
+                                    </div>
+                                    <div class="sunrise_info">
+                                            <small>Sunrise</small>
+                                        <div class="time_sunrise">--:-- AM</div>
+                                    </div>
+                                </div>
+    
+                                <div class="sunset sunrise_sunset_element">
+                                    <div class="sunrise_sunset_img">
+                                        <img src="/img/ui/sunset.svg" alt="sunset" width="45px">
+                                    </div>
+                                    <div class="sunset_info">
+                                        <small>Sunset</small>
+                                        <div class="time_sunset">--:-- PM</div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!-- влажность -->
+                        <div class="humidity_info today_highlights-item">
+                            <div class="humidity_info_title today_highlights_element_title">Humidity</div>
+                            <div class="humidity_state today_highlights-item_state">
+                                <img src="/img/ui/humidity.svg" alt="humidity_img" width="45px">
+                                <div class="humidity_value">--<small>%</small></div>
+                            </div>
+                        </div>
+                        <!-- давление -->
+                        <div class="pressure_info today_highlights-item">
+                            <div class="pressure_info_title today_highlights_element_title">Pressure</div>
+                            <div class="pressure_state today_highlights-item_state">
+                                <img src="/img/ui/pressure.svg" alt="pressure" width="45px">
+                                <div class="pressure_value">--<small>hPa</small></div>
+                            </div>
+                        </div>
+                        <!-- видимость -->
+                        <div class="visibility_info today_highlights-item">
+                            <div class="visibility_info_title today_highlights_element_title">Visibility</div>
+                            <div class="visibility_state today_highlights-item_state">
+                                <img src="/img/ui/visibility.svg" alt="visibility" width="45px">
+                                <div class="visibility_value">--<small>km</small></div>
+                            </div>
+                        </div>
+                        <!-- темп. ощущается как -->
+                        <div class="feels-like_info today_highlights-item">
+                            <div class="feels-like_info_title today_highlights_element_title">Feels like</div>
+                            <div class="feels-like_state today_highlights-item_state">
+                                <img src="/img/ui/feels-like.svg" alt="feels-like" width="45px">
+                                <div class="feels-like_value">--°<small>c</small></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="time_title">Today at</div>
+
+                <div class="today_temp_time">
+
+                    <div class="today_temp_time_item">
+                        <div class="today_temp_time_item-time">00:00</div>
+                        <div class="today_temp_time_item-img"><img id="today_temp_time_item-img-1" src="/img/ui/loading_weather.svg" alt=""></div>
+                        <div class="today_temp_time_item-temp-1">--°<small>c</small></div>
+                    </div>
+
+                    <div class="today_temp_time_item 12am">
+                        <div class="today_temp_time_item-time">03:00</div>
+                        <div class="today_temp_time_item-img"><img id="today_temp_time_item-img-2" src="/img/ui/loading_weather.svg" alt=""></div>
+                        <div class="today_temp_time_item-temp-2">--°<small>c</small></div>
+                    </div>
+
+                    <div class="today_temp_time_item">
+                        <div class="today_temp_time_item-time">06:00</div>
+                        <div class="today_temp_time_item-img"><img id="today_temp_time_item-img-3" src="/img/ui/loading_weather.svg" alt=""></div>
+                        <div class="today_temp_time_item-temp-3">--°<small>c</small></div>
+                    </div>
+
+                    <div class="today_temp_time_item">
+                        <div class="today_temp_time_item-time">09:00</div>
+                        <div class="today_temp_time_item-img"><img id="today_temp_time_item-img-4" src="/img/ui/loading_weather.svg" alt=""></div>
+                        <div class="today_temp_time_item-temp-4">--°<small>c</small></div>
+                    </div>
+
+
+                    <div class="today_temp_time_item">
+                        <div class="today_temp_time_item-time">12:00</div>
+                        <div class="today_temp_time_item-img"><img id="today_temp_time_item-img-5" src="/img/ui/loading_weather.svg" alt=""></div>
+                        <div class="today_temp_time_item-temp-5">--°<small>c</small></div>
+                    </div>
+
+                    <div class="today_temp_time_item">
+                        <div class="today_temp_time_item-time">15:00</div>
+                        <div class="today_temp_time_item-img"><img id="today_temp_time_item-img-6" src="/img/ui/loading_weather.svg" alt=""></div>
+                        <div class="today_temp_time_item-temp-6">--°<small>c</small></div>
+                    </div>
+
+                    <div class="today_temp_time_item">
+                        <div class="today_temp_time_item-time">18:00</div>
+                        <div class="today_temp_time_item-img"><img id="today_temp_time_item-img-7" src="/img/ui/loading_weather.svg" alt=""></div>
+                        <div class="today_temp_time_item-temp-7">--°<small>c</small></div>
+                    </div>
+
+                    <div class="today_temp_time_item">
+                        <div class="today_temp_time_item-time">21:00</div>
+                        <div class="today_temp_time_item-img"><img id="today_temp_time_item-img-8" src="/img/ui/loading_weather.svg" alt=""></div>
+                        <div class="today_temp_time_item-temp-8">--°<small>c</small></div>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script defer src="/js/main.js" type="module"></script>
+</body>
+
+</html>
